@@ -1,0 +1,21 @@
+Creating a SQL Table
+--
+CREATE TABLE returns --creates a table named returns
+( 
+    order_id INT not null,  --defining data columns in the table 
+    first_name VARCHAR(50) not null,
+    last_name VARCHAR(50) not null,
+    DOR DATE not Null,
+    Quantity INT not null,
+    Phone_Number int not null,
+    Email_ID varchar(200) check (Email_ID like '%_@__%.__%'),
+    DOB DATE Null
+    constraint Order_No primary key (order_id) --defining a constraint in the file. A unique attribute, in this case, order_id
+)
+/* to create a column ->column name->define data type (int,string etc)->can it remain empty/no->give a constraint
+Data type- INT, VARCHAR, DATE, CHAR
+Empty - NULL/NOT NULL
+Constraint - give name of a constrint (not visible in the table) and then reference it to a unique attribute by writting
+primary key (column name)
+*/
+--
