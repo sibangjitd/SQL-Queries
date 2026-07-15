@@ -1,0 +1,41 @@
+/*MANUALLY INSERTING VALUES INTO TABLE*/
+
+insert into customers (id,first_name,country,score)
+values 
+(6,'Sib','India',450),
+(7,'swa','india',670)
+
+insert into customers (first_name,country,score,id)
+values 
+('Sib','India',450,8),
+('swa','india',670,9)
+
+insert into customers (first_name,country,id)
+values 
+('iko','India',10),
+('kko','india',11)
+
+/* the columns names in the table when selected. Data is added into those columns. 
+The sequence of writing the column names does not matter */
+
+/* When we enter id as 8 and 9 again, as it was already inserted into the table and it is a unique parameter. 
+When executed, it will show an error
+*/
+insert into customers (first_name,country,id)
+values 
+('ssko','India',8),
+('ett','india',9)
+
+/*INSERTING ANOTHER TABLE VALUES INTO A DIFFERENT TABLE*/
+
+INSERT INTO salesdb.sales.customers (CustomerID,FirstName,Country,Score)
+Select 
+id,
+first_name,
+country,
+score
+from MyDatabase.dbo.customers as S
+where not exists ( select * from salesdb.sales.customers as R
+                   where S.id = R.CustomerID )
+
+/* IMP- since id is a unique parameter. duplicate ID cannot be inserted into the table if it has constraints. So, WHERE NOT EXISTS syntax is used*/
