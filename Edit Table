@@ -1,0 +1,7 @@
+alter table returns
+add price int not null
+
+alter table returns
+drop column DOR
+
+/* add and drop functions cannot be used in one command. So two commands have to given, hence the space*/
