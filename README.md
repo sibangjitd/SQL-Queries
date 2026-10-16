@@ -12,6 +12,8 @@ Hands-on SQL practice using supply chain and logistics scenarios. All code is wr
 | # | Scenario | Skills |
 |---|----------|--------|
 | 01 | [Container shipments](01-container-shipments) | DDL, DML, filtering, aggregation |
+| 02 | [SalesDB joins](02-salesdb-joins) | Joins |
+| 03 | [Container network](03-joins-and-set-operators) | Joins, set operators |
 
 ## Notes
 - [SQL cheat sheet](notes/sql-cheatsheet.md): my own notes on commands, operators and execution order
